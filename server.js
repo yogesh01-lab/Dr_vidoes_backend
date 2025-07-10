@@ -65,14 +65,6 @@ app.post('/api/update-count', (req, res) => {
   });
 });
 
-// Serve React static files
-app.use(express.static(path.join(__dirname, 'client/public')));
-
-// Wildcard route for React Router
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/public', 'index.html'));
-});
-
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
