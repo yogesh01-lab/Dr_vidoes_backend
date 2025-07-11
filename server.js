@@ -9,8 +9,6 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-const cors = require('cors');
-
 app.use(cors({
   origin: 'https://dr-vidoes-frontend.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
